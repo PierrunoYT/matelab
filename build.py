@@ -1,7 +1,6 @@
 import os
 import glob
 import re
-import argparse
 import datetime
 import shutil
 from typing import Iterable, Dict
@@ -14,13 +13,15 @@ SCRIPT_DIR = os.path.abspath(os.path.realpath(os.path.dirname(__file__)))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
 DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 
+
 def calc_score(caffeine, sugar, avrprice):
     """
     Calculate the matelab score
-    
+
     caffeine/((sugar+1)/avrprice)
     """
-    return round2(float(caffeine) / ((float(sugar)+1)*float(avrprice)))
+    return round2(float(caffeine) / ((float(sugar) + 1) * float(avrprice)))
+
 
 def round2(number):
     """
@@ -127,7 +128,15 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
             product_yaml.update({"sugartotal": round2(product_sugartotal)})
 
         # score
-        product_yaml.update({"score": calc_score(product_yaml["caffeine"], product_yaml["sugar"], product_yaml["averageprice"])})
+        product_yaml.update(
+            {
+                "score": calc_score(
+                    product_yaml["caffeine"],
+                    product_yaml["sugar"],
+                    product_yaml["averageprice"],
+                )
+            }
+        )
 
         products.append(product_yaml)
 
@@ -223,10 +232,3 @@ def main(args):
     urls = gather_sitemap_urls()
     render_sitemap(env, urls=urls)
     render_rss(env, products)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--drafts", action="store_true")
-    args = parser.parse_args()
-    main(args)

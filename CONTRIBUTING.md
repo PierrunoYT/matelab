@@ -39,11 +39,8 @@ For currently missing data, check out the list of [open issues with the label 'm
 Use this if you want to preview the site locally.
 
 ```sh
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-python3 build.py
+# https://docs.astral.sh/uv/getting-started/installation/
+uv run main.py
 
 python3 -m http.server -d output 8081
 ```

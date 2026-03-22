@@ -1,0 +1,11 @@
+[project]
+name = "matelab"
+version = "0.0.1"
+description = "Matelab is a community driven site about mate-based beverages available in Switzerland"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2==3.1.6",
+    "markupsafe==3.0.2",
+    "pyyaml==6.0.2",
+]
