@@ -54,14 +54,14 @@ stores:
     -
         name: "Paul Ullrich"
         url: "https://ullrich.ch/de/el-tony-mate-zero-ka-12x-ew-33cl/106628/"
-        price: 2.20
-        amount: 1
+        price: 26.40
+        amount: 12
         date: 2026-04-02
         comment: "EW"
     -
         name: "Paul Ullrich"
         url: "https://ullrich.ch/de/el-tony-mate-zero-ha-24x-mw-33cl/106629/"
-        price: 2.30
-        amount: 1
+        price: 55.20
+        amount: 24
         date: 2026-04-02
         comment: "MW (Mehrweg)"
