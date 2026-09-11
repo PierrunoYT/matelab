@@ -1,0 +1,25 @@
+draft: false
+discontinued: false 
+brand: Volg 
+product: Mate 
+size: 330 
+packaging: Can 
+caffeine: 23 
+sugar: 5.8
+ingredients: 
+    - "Wasser"
+    - "Zucker"
+    - "Zitronensaft aus Konzentrat 3%"
+    - "Yerba Mate-Extrakt 0.7%"
+    - "Kohlensäure"
+    - "Guaranasamenextrakt"
+    - "Natürliches Mateblätter Aroma"
+    - "Konservierungsstoff : Kalliumsorbat"
+stores:
+    -
+        name: Volg 
+        url: https://www.volg.ch/ 
+        price: 1 
+        amount: 1 
+        date: 2026-09-08 
+        comment: 
