@@ -22,10 +22,3 @@ stores:
         amount: 6
         date: 2023-01-12
         comment: "-"
-    -
-        name: "Migros"
-        url: "https://www.migros.ch/de/product/mo/7080902"
-        price: 1
-        amount: 1
-        date: 2026-09-18
-        comment: "price unconfirmed - Migros blocks automated access"

@@ -35,10 +35,3 @@ stores:
         amount: 24
         date: 2026-09-18
         comment: "-"
-    -
-        name: "Feldschlösschen Getränkeshop"
-        url: "https://feldschloesschen.ch/shop/products/organics-by-red-bull-viva-mate-250ml-dose-24-pack"
-        price: 39.90
-        amount: 24
-        date: 2026-09-18
-        comment: "-"
