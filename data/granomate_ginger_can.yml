@@ -1,0 +1,22 @@
+draft: true # caffeine content missing
+discontinued: false
+brand: "Grano Maté"
+product: "Ginger BIO"
+size: 330
+packaging: Can
+caffeine:
+sugar: 3.5
+ingredients:
+    - "Infusion à froid de maté gazéifiée (eau, maté BIO d'Argentine)"
+    - "Sucre de canne BIO"
+    - "Jus de gingembre BIO"
+    - "Jus de lime BIO"
+    - "Acidifiant : acide citrique"
+stores:
+    -
+        name: "Grano Maté"
+        url: "https://granomate.ch/products/grano-mate-ginger-bio"
+        price: 45.60
+        amount: 12
+        date: 2026-09-18
+        comment: "Preis für 12er-Pack, auch als Glasflasche erhältlich"
