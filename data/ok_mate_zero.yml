@@ -26,3 +26,10 @@ stores:
         amount: 1
         date: 2026-08-22
         comment: ""
+    -
+        name: "avec"
+        url: "https://avec.ch/de/info/angebot/ok-mate-niceprice-einfranken-id2942"
+        price: 1.00
+        amount: 1
+        date: 2026-09-18
+        comment: "Promo-Angebot, ggf. zeitlich begrenzt"
