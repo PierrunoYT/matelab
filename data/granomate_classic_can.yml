@@ -4,12 +4,12 @@ brand: "Grano Maté"
 product: "Classic BIO"
 size: 330
 packaging: Can
-caffeine:
+caffeine: 0
 sugar: 3.5
 ingredients:
-    - "Infusion à froid de maté gazéifiée (eau, maté BIO d'Argentine)"
-    - "Sucre de canne BIO"
-    - "Acidifiant : acide citrique"
+    - "Kohlensäurehaltiger Kaltaufguss von Mate (Wasser, BIO-Mate aus Argentinien)"
+    - "BIO Rohrzucker"
+    - "Säuerungsmittel: Zitronensäure"
 stores:
     -
         name: "Grano Maté"
@@ -17,4 +17,4 @@ stores:
         price: 42.00
         amount: 12
         date: 2026-09-18
-        comment: "Preis für 12er-Pack, auch als Glasflasche erhältlich"
+        comment: "-"
