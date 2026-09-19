@@ -1,0 +1,22 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "uv run main.py"
+entrypoint = ["python3", "-m", "http.server", "-d", "output", "-b", "127.0.0.1", "8080"]
+
+include_dir = ["data", "static"]
+include_ext = ["*"]
+
+[misc]
+clean_on_exit = true
+startup_banner = ""
+
+[screen]
+clear_on_rebuild = true
+keep_scroll = true
+
+[proxy]
+enabled = true
+proxy_port = 9000
+app_port = 8080

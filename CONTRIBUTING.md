@@ -6,8 +6,8 @@
 
 For currently missing products, check out the list of [open issues with the label 'missing product'](https://github.com/matelab-ch/matelab/issues?q=state%3Aopen%20label%3A%22missing%20product%22). To add a new product:
 
-+ Copy the template from `templates/product.yml` into `data`. 
-	+ Give it a name in the format of `<brand>_<product>.yml`. 
++ Copy the template from `templates/product.yml` into `data`.
+	+ Give it a name in the format of `<brand>_<product>.yml`.
 	+ If you are adding a product in different packaging, name it `<brand>_<product>_<packaging>.yml`.
 + Edit the file and submit your changes via a pull request.
 	+ Please also send your source (URL, picture of beverage) for me to verify the data.
@@ -16,14 +16,14 @@ For currently missing products, check out the list of [open issues with the labe
 
 For currently missing data, check out the list of [open issues with the label 'missing data'](https://github.com/matelab-ch/matelab/issues?q=state%3Aopen%20label%3A%22missing%20data%22). To change existing data:
 
-+ Find the product under `data`. 
++ Find the product under `data`.
 + Edit the file and submit your changes via a pull request.
 	+ If with you changes, the file now has all required fields, set `draft` to `false`.
 	+ Please also send your source (URL, picture of beverage) for me to verify the data.
 
 ## Adding a Store to a Product
 
-+ Find the product under `data`. 
++ Find the product under `data`.
 + Edit the file and submit your changes via a pull request.
 	+ For store URLs, make sure to remove any tracking and/or referral identifiers.
 	+ Please also send your source (URL, picture of beverage) for me to verify the data.
@@ -31,18 +31,19 @@ For currently missing data, check out the list of [open issues with the label 'm
 ## Removing/Discontinuing a Product
 
 + Since this data should be a sort of archive, products should not get fully deleted
-+ If a product is no longer available, find the product under `data`. 
++ If a product is no longer available, find the product under `data`.
 + Edit the file and submit your changes via a pull request.
 	+ Set `discontinued` to `true` but **do not remove store links**.
 	+ Please also send your source (URL, picture of beverage) for me to verify the data.
 
-## Local Dev Setup
+## Dev Setup
 
-Use this if you want to preview the site locally.
+To build and preview the site locally, you can use [uv](https://docs.astral.sh/uv/getting-started/installation/) and the built-in HTTP server.
 
 ```sh
-# https://docs.astral.sh/uv/getting-started/installation/
 uv run main.py
-
-python3 -m http.server -d output 8081
+python3 -m http.server -d output 8080
 ```
+
+If you have [air](https://github.com/air-verse/air) installed, you can benefit from hot-reloading. Just run `air` from the root of the project and view the preview on http://127.0.0.1:9090.
+
