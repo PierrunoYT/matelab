@@ -97,9 +97,13 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
         product_price100ml = (product_averageprice / product_yaml["size"]) * 100
         product_yaml.update({"price100ml": round2(product_price100ml)})
 
-        # price1mgcaffeine
-        product_price1mgcaffeine = product_averageprice / product_yaml["caffeine"]
-        product_yaml.update({"price1mgcaffeine": round2(product_price1mgcaffeine)})
+        # Set defaults when caffeine is 0
+        product_yaml.update({"price1mgcaffeine": "0"})
+
+        if product_yaml["caffeine"] != 0:
+            # price1mgcaffeine
+            product_price1mgcaffeine = product_averageprice / product_yaml["caffeine"]
+            product_yaml.update({"price1mgcaffeine": round2(product_price1mgcaffeine)})
 
         # total caffein in product
         product_caffeinetotal = product_yaml["caffeine"] * (product_yaml["size"] / 100)
@@ -116,8 +120,13 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
 
         if product_yaml["sugar"] != 0:
             # sugar1mgcaffeine
-            product_sugar1mgcaffeine = product_yaml["sugar"] / product_yaml["caffeine"]
-            product_yaml.update({"sugar1mgcaffeine": round2(product_sugar1mgcaffeine)})
+            if product_yaml["caffeine"] != 0:
+                product_sugar1mgcaffeine = (
+                    product_yaml["sugar"] / product_yaml["caffeine"]
+                )
+                product_yaml.update(
+                    {"sugar1mgcaffeine": round2(product_sugar1mgcaffeine)}
+                )
 
             # caffeine1gsugar
             product_caffeine1gsugar = product_yaml["caffeine"] / product_yaml["sugar"]
